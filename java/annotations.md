@@ -3,17 +3,19 @@
 ## Purpose
 
 Annotations are syntactic metadata. They can be used for:
- - information for the compiler (e.g. `@Override`, `@SuppressWarnings`)
- - compile-time and deployment-time processing (e.g. [`@AutoValue`](https://github.com/google/auto/tree/master/value))
- - runtime processing (e.g. Guice's `@Inject`/`@Provides`)
+ - information for the compiler (e.g. [`@Override`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Override.html), [`@Deprecated`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Deprecated.html))
+ - compile-time and deployment-time processing (e.g. code generation like [`@AutoValue`](https://github.com/google/auto/tree/master/value))
+ - runtime processing
 
 ## Syntax
 
 `@<annotation name>`
+
 `@<annotation name>(<content>)`
+
 `@<annotation name>(<parameter name> = <content>(, ...))`
 
-If there is only one parameter named `value`, it can be omitted.
+If there is only one parameter named `value`, it can be omitted during usage.
 
 ## Usage
 
@@ -34,7 +36,7 @@ public @interface DependsOn {
 }
 ```
 
-This annotation should only be applied to types (i.e. classes). `@Target` documentation [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Target.html)
+This annotation should only be applied to types (i.e. classes). `@Target` documentation [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Target.html).
 
 ```java
 @Target(ElementType.TYPE)
@@ -43,7 +45,7 @@ public @interface DependsOn {
 }
 ```
 
-This annotation should be available through reflection during runtime. `@Retention` documentation [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Retention.html)
+This annotation should be available through reflection during runtime. `@Retention` documentation [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Retention.html).
 
 ```java
 @Target(ElementType.TYPE)
@@ -84,7 +86,7 @@ Now if a soldier is missing their weapon, an exception will be thrown.
 
 However, soldiers often depend on more than just a weapon. Soldiers should also have armor.
 
-`@DependsOn` must be updated to be repeatable. `@Repeatable` documentation [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Repeatable.html)
+`@DependsOn` must be updated to be repeatable. `@Repeatable` documentation [here](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/annotation/Repeatable.html).
 
 First create the wrapper annotation. This should support the same element type targets and retention policies and must have an element named `value` supporting an array of the original annotation.
 
@@ -96,7 +98,7 @@ public @interface DependsOnRepeated {
 }
 ```
 
-Now update the original annotation specifying the wrapper annotation.
+Now update the original annotation to specify its wrapper annotation.
 
 ```java
 @Target(ElementType.TYPE)
