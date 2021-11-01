@@ -117,7 +117,9 @@ Humans are unreliable.
 
 **_TL;DR: System's ability to cope with increased load._**
 
-_As system grows (in data volume, traffic volume, or complexity), there should be reasonable ways to dealing with the growth._
+_As system grows (in data volume, traffic volume, or complexity), there should be reasonable ways of dealing with the growth._
+
+**Fan-out load**: the number of requests to other services that need to be made in order to serve one incoming request
 
 - **Load parameter**: numbers that describe load (for average or edge case)
   - requests per second
