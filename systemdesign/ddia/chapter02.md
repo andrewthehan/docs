@@ -4,8 +4,8 @@
 
 - [Data Models](#data-models)
   - [Model Types](#model-types)
-    - [Relational Model ("SQL")](#relational-model---sql--)
-    - [Nonrelational Model ("NoSQL")](#nonrelational-model---nosql--)
+    - [Relational Model](#relational-model)
+    - [Nonrelational Model](#nonrelational-model)
       - [Document Model](#document-model)
     - [Hierarchical Model](#hierarchical-model)
     - [Network Model](#network-model)
@@ -42,8 +42,9 @@
 
 ### Model Types
 
-#### Relational Model ("SQL")
+#### Relational Model
 
+- "SQL"
 - Data is organized into _relations_ (_tables_ in SQL) where each relation is an unordered collection of _tuples_ (_rows_ in SQL)
 - Roots primarily in business data processing
   - _Transactions processing_: sales/banking transactions, airline reservations, stock-keeping
@@ -53,8 +54,9 @@
 - Data is simple, no complicated access paths
 - Query optimizer automatically forms the "access path" so developer rarely needs to think about it
 
-#### Nonrelational Model ("NoSQL")
+#### Nonrelational Model
 
+- "NoSQL"
 - Latest attempt at competing approach to relational model
 - _NoSQL_ doesn't refer to any particular technology, originally a Twitter hashtag
 - Driving forces behind adoption:
