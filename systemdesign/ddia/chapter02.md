@@ -49,7 +49,7 @@
   - _Transactions processing_: sales/banking transactions, airline reservations, stock-keeping
   - _Batch processing_: customer invoicing, payroll, reporting
 - Good support for joins
-- Good support for many-to-ony and many-to-many relationships
+- Good support for many-to-one and many-to-many relationships
 - Data is simple, no complicated access paths
 - Query optimizer automatically forms the "access path" so developer rarely needs to think about it
 
@@ -246,7 +246,7 @@ IDs remove duplication:
   - Collection of properties (key-value pairs)
 - Can consider graph stores as consisting of two relational tables, one for vertices and one for edges
 - Important aspects:
-  - Any vertex can have an edge connecting it with any other edge (schema cannot restrict these)
+  - Any vertex can have an edge connecting it with any other vertex (schema cannot restrict these)
   - Given any vertex, you can efficiently find both its incoming and its outgoing edges, and thus traverse the graph
   - By using different labels for different kinds of relationships, you can store several different kinds of information in a single graph
 
