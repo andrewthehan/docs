@@ -1,3 +1,3 @@
 # System Design
 
-[Designing Data Intensive Applications](./ddia)
+[Designing Data-Intensive Applications (DDIA)](./ddia)
