@@ -6,7 +6,7 @@
 
 - [Chapter 2: Data Models and Query Languages](./chapter02.md)
 
-- Chapter 3: Storage and Retrieval
+- [Chapter 3: Storage and Retrieval](./chapter03.md)
 
 - Chapter 4: Encoding and Evolution
 
